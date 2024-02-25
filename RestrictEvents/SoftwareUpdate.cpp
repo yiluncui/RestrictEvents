@@ -161,7 +161,7 @@ static int my_sysctl_vmm_present(__unused struct sysctl_oid *oidp, __unused void
 		int hv_vmm_present_on = 1;
 		return SYSCTL_OUT(req, &hv_vmm_present_on, sizeof(hv_vmm_present_on));
 	} else if (revsbvmmIsSet && (strncmp(procname, "bluetoothd",  sizeof("bluetoothd")-1) == 0)) {
-		int hv_vmm_present_off = 0;
+		int hv_vmm_present_off = 0; 
 		return SYSCTL_OUT(req, &hv_vmm_present_off, sizeof(hv_vmm_present_off));
 	} else if (revassetIsSet && (strncmp(procname, "AssetCache",  sizeof("AssetCache")-1) == 0)) {
 		int hv_vmm_present_off = 0;
